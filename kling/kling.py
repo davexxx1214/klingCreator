@@ -27,9 +27,9 @@ def call_for_daily_check(session: requests.Session, is_cn: bool) -> bool:
         print(f"Call daily login success with {is_cn}:\n{r.json()}\n")
         return True
 
-    raise Exception(
-        "Call daily login failed with CN or Non-CN. The token may be incorrect."
-    )
+    # raise Exception(
+    #     "Call daily login failed with CN or Non-CN. The token may be incorrect."
+    # )
 
 
 class TaskStatus(Enum):
