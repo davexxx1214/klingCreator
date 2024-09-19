@@ -267,8 +267,10 @@ class VideoGen(BaseGen):
                 image_payload_url = image_url
             if is_high_quality:
                 model_type = "m2v_img2video_hq"
+                kling_version = "1.5"
             else:
                 model_type = "m2v_img2video"
+                kling_version = "1.0"
             payload = {
                 "arguments": [
                     {"name": "prompt", "value": prompt},
@@ -283,6 +285,10 @@ class VideoGen(BaseGen):
                     {
                         "name": "duration",
                         "value": "5",
+                    },
+                    {
+                        "name": "kling_version",
+                        "value": kling_version,
                     },
                     {
                         "name": "tail_image_enabled",
@@ -310,8 +316,10 @@ class VideoGen(BaseGen):
         else:
             if is_high_quality:
                 model_type = "m2v_txt2video_hq"
+                kling_version = "1.5"
             else:
                 model_type = "m2v_txt2video"
+                kling_version = "1.0"
             payload = {
                 "arguments": [
                     {"name": "prompt", "value": prompt},
@@ -326,6 +334,10 @@ class VideoGen(BaseGen):
                     {
                         "name": "duration",
                         "value": "5",
+                    },
+                    {
+                        "name": "kling_version",
+                        "value": kling_version,
                     },
                     {
                         "name": "aspect_ratio",
