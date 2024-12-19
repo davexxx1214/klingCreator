@@ -267,10 +267,10 @@ class VideoGen(BaseGen):
                 image_payload_url = image_url
             if is_high_quality:
                 model_type = "m2v_img2video_hq"
-                kling_version = "1.5"
+                kling_version = "1.6"
             else:
                 model_type = "m2v_img2video"
-                kling_version = "1.0"
+                kling_version = "1.6"
             payload = {
                 "arguments": [
                     {"name": "prompt", "value": prompt},
